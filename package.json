@@ -1,25 +1,26 @@
 {
-  "name": "movie_api",
+  "name": "more_movie_metadata",
   "version": "1.0.0",
-  "description": "",
+  "description": "A little tool to get information about movies.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fatihcicek/movie_api.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "hannesdonel",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fatihcicek/movie_api/issues"
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.9"
   },
-  "homepage": "https://github.com/fatihcicek/movie_api#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
-   }
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.2"
+  }
 }
