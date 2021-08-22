@@ -2,7 +2,7 @@ const express = require('express');
 morgan = require('morgan');
 const app = express();
 path = require('path'),
-bodyParser = require('path'),
+bodyParser = require('body-parser'),
 uuid = require ('uuid');
 
 const mongoose = require('mongoose');
@@ -62,7 +62,7 @@ app.get('/directors', (req, res) => {
     }).catch((err) => {
       console.error(err);
       res.status(500).sned('Error: ' + err);
-
+    });
 });
 
 // Gets the data about the name of the director
