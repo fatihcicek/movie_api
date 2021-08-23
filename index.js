@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 app.get('/movies', (req, res) => {
 Movies.find()
   .then((movies) => {
-    res.status(201).json(movies);
+    res.status(200).json(movies);
   })
   .catch((err) => {
     console.error(err);
@@ -61,7 +61,7 @@ app.get('/directors', (req, res) => {
       res.status(200).json(director);
     }).catch((err) => {
       console.error(err);
-      res.status(500).sned('Error: ' + err);
+      res.status(500).send('Error: ' + err);
     });
 });
 
@@ -86,7 +86,7 @@ app.get('/genre', (req, res) => {
       res.status(200).json(genre);
     }).catch((err) => {
       console.error(err);
-      res.status(500).sned('Error: ' + err);
+      res.status(500).send('Error: ' + err);
     });
 });
 
@@ -107,7 +107,7 @@ app.get('/genre/:Name', (req, res) => {
 app.get('/users', (req, res) => {
  Users.find()
    .then((users) => {
-     res.status(201).json(users);
+     res.status(200).json(users);
    }).catch((err) => {
      console.error(err);
      res.status(500).send('Error: ' + err);
@@ -151,7 +151,7 @@ app.post('/users', (req, res) => {
             Email: req.body.Email,
             Birthday: req.body.Birthday
           })
-          .then((user) =>{res.status(201).json(user) })
+          .then((user) =>{res.status(200).json(user) })
         .catch((error) => {
           console.error(error);
           res.status(500).send('Error: ' + error);
